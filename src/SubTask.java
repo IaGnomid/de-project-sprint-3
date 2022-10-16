@@ -8,7 +8,6 @@ public class SubTask extends Task{
     public int getIdEpic() {
         return idEpic;
     }
-
     @Override
     public String toString() {
         return "SubTask{" +

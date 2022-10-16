@@ -66,11 +66,9 @@ public Integer generatingId(){
     Epic tempEpic = (Epic) epics.get(subTask.getIdEpic());
     tempEpic.addList(subTask.getId());//Нужно найти нужный эпик по id в мапе и добавить в его Лист с айдишнками сабтасков...
     }
-
     public void createEpic(Epic epic) {
         epics.put(epic.getId(), epic);
     }
-
     public void updateTask(Task newTask){
         if(tasks.containsKey(newTask.getId())){
             tasks.put(newTask.getId(), newTask);
