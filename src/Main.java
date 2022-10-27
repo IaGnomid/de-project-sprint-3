@@ -13,5 +13,7 @@ manager.createSubTask(new SubTask("Subtask2","Description subtask", manager.gene
         manager.updateSubTask(new SubTask("new Name", "new description", 3, 2), "DONE");
 
         System.out.println(manager.getAllEpics());
+
+
     }
 }
