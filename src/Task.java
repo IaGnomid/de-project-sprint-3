@@ -1,15 +1,17 @@
-public class Task {
+public abstract class Task {
     private String name;
     private String description;
     private int id;
-    private String status;
+    private TaskStatus status;
 
     public Task(String name, String description, int id) {
         this.name = name;
         this.description = description;
         this.id = id;
-        this.status = "NEW";
+        this.status = TaskStatus.NEW;
     }
+
+
 
     public String getName() {
         return name;
@@ -23,7 +25,7 @@ public class Task {
         return id;
     }
 
-    public String getStatus() {
+    public TaskStatus getStatus() {
         return status;
     }
 
@@ -39,7 +41,7 @@ public class Task {
         this.id = id;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
 
