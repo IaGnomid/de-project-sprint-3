@@ -6,22 +6,19 @@ public interface TaskManager {
 
     Integer generatingId();
 
-    public Map<Integer, Task> getAll();
-    //public Map<Integer, Task> getAllTasks();
+    public Map<Integer, Task> getAllTasks();
 
-    public Map<Integer, Task> getAllEpics();
+    public Map<Integer, Epic> getAllEpics();
 
-    public Map<Integer, Task> getAllSubTasks();
+    public Map<Integer, SubTask> getAllSubTasks();
 
     public void delAllSubTasks();
 
     public void delAllEpics();
 
-    //public void delAllTasks();
+    public void delAllTasks();
 
-    public Task getById(int id);
-
-    //public void createTask(Task task);
+    public void createTask(Task task);
 
     public void createSubTask(SubTask subTask);
 
@@ -29,16 +26,22 @@ public interface TaskManager {
 
     public void updateTask(Task newTask);
 
-    public void dellById(int id);
+    public void updateSubTask(SubTask newTask);
 
-    public ArrayList<Integer> getTasks(Epic epic);
+    public void updateEpic(Epic newEpic);
 
-    public void checkStatus(Epic epic);
+    public boolean dellEpicById(int id);
 
-    public void updateSubTask(SubTask newTask, TaskStatus status);
+    public boolean dellSubTaskById(int id);
 
-    public Task getEpic(int id);
+    public boolean dellTaskById(int id);
 
-    public Task getSubTask(int id);
+    public List<SubTask> getTasks(Epic epic);
+
+    public Epic getEpic(int id);
+
+    public SubTask getSubTask(int id);
+
+    public List<Task> getHistory();
 
 }
