@@ -34,6 +34,10 @@ public class Main {
 
         manager.updateSubTask(new SubTask("new Name", "new description", 3, 2));
 
+        System.out.println(manager.getSubtasksByEpicId(2));
+
+        manager.dellSubTaskById(3);
+
         System.out.println("Обращаемся к таскам");
         for (int i = 0; i < 12; i++) {
             System.out.println(manager.getEpic(i));

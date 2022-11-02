@@ -41,7 +41,7 @@ public interface TaskManager {
 
     public boolean dellTaskById(int id);
 
-    public List<Integer> getSubtasksByEpicId(int epicId);
+    public List<SubTask> getSubtasksByEpicId(int epicId);
 
     public Epic getEpic(int id);
 
