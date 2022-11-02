@@ -1,4 +1,9 @@
-import java.util.ArrayList;
+package service;
+
+import model.Epic;
+import model.SubTask;
+import model.Task;
+
 import java.util.List;
 import java.util.Map;
 
@@ -36,11 +41,13 @@ public interface TaskManager {
 
     public boolean dellTaskById(int id);
 
-    public List<SubTask> getTasks(Epic epic);
+    public List<Integer> getSubtasksByEpicId(int epicId);
 
     public Epic getEpic(int id);
 
     public SubTask getSubTask(int id);
+
+    public Task getTask(int id);
 
     public List<Task> getHistory();
 

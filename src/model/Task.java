@@ -1,3 +1,5 @@
+package model;
+
 public class Task {
     private String name;
     private String description;
@@ -10,7 +12,6 @@ public class Task {
         this.id = id;
         this.status = TaskStatus.NEW;
     }
-
 
 
     public String getName() {

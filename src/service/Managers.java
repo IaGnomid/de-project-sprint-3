@@ -1,3 +1,8 @@
+package service;
+
+import service.HistoryManager;
+import service.TaskManager;
+
 public class Managers {
 
     private Managers() {
