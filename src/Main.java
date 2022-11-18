@@ -20,7 +20,7 @@ public class Main {
         manager.createTask(new Task("Task1", "DescriptionTask1", manager.generatingId()));
 
         System.out.println("Обращаемся к таскам");
-        System.out.println(manager.getSubtasksByEpicId(2));
+        //System.out.println(manager.getSubtasksByEpicId(2));
         System.out.println(manager.getEpic(1));
         System.out.println(manager.getEpic(2));
         System.out.println(manager.getEpic(1));

@@ -55,6 +55,26 @@ class CustomLinkedList<T>{
         return list;
     }
 
+    public void removeFirst(){
+        if(head.next == null){
+            tail = null;
+        }
+        else {
+            head.next.prev = null;
+            head = head.next;
+        }
+    }
+
+    public void removeLast(){
+        if(head.next == null){
+            head = null;
+        }else{
+            tail.prev.next = null;
+            tail = tail.prev;
+        }
+    }
+
+
     public void removeNode(Node key){
         Node cur = head;
         while(cur.data != key.data){
@@ -64,11 +84,9 @@ class CustomLinkedList<T>{
             }
         }
         if(key.data == head.data){
-            cur.next.prev = null;
-            cur.next = head;
+            removeFirst();
         }else if (key.data == tail.data){
-            cur.prev.next = null;
-            cur.prev = tail;
+            removeLast();
         }else {
             cur.next.prev = cur.prev;
             cur.prev.next = cur.next;
